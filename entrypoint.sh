@@ -1,8 +1,9 @@
 #!/bin/bash
+rm -rf /etc/matrixim/*
 python -m synapse.app.homeserver \
 	--server-name $SERVERNAME \
-	--config-path /opt/homeserver.yaml \
+	--config-path /etc/matrixim/homeserver.yaml \
 	--generate-config \
 	--report-stats=no
-synctl start /opt/homeserver.yaml
+synctl start /etc/matrixim/homeserver.yaml
 tail -f /homeserver.log
