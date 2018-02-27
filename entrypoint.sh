@@ -1,6 +1,6 @@
 #!/bin/bash
 python -m synapse.app.homeserver \
-	--server-name mbgmuc.de \
+	--server-name $SERVERNAME \
 	--config-path /opt/homeserver.yaml \
 	--generate-config \
 	--report-stats=no
