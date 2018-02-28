@@ -6,7 +6,5 @@ python -m synapse.app.homeserver \
 	--generate-config \
 	--report-stats=no
 mkdir -p /etc/matrixim/db
-cp /etc/matrixim/turnserver.conf /etc/turnserver.conf
-/opt/coturn/bin/turnserver -o
 synctl start /etc/matrixim/homeserver.yaml
 tail -f /homeserver.log
